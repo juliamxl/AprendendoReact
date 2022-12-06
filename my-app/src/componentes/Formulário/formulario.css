@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Prata&family=Quicksand:wght@300;400;500&family=Work+Sans&display=swap');
+
+.formulario{
+    display: flex;
+    justify-content: center;
+}
+
+.formulario form{
+    width: 70%;
+    padding: 30px;
+    background-color: #F6F6F6;
+    margin: 50px 0px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+form h2{
+    font-family: 'Hind', sans-serif;
+    font-family: 'Prata', serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
