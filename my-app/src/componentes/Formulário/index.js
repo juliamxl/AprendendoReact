@@ -4,7 +4,6 @@ import ListaSuspensa from '../ListaSuspensa';
 import Button from '../Button';
 import {useState} from 'react';
 
-
 function Formulario(props) {
 
     const [nome, setNome] = useState('')
@@ -58,9 +57,10 @@ function Formulario(props) {
                 aoAlterado = {valor => setImagem(valor)}
                 />
                 <ListaSuspensa 
-                label='Time' 
+                obrigatorio={true} 
+                label="Time"
                 itens={times} 
-                valor ={time}
+                valor = {time}
                 aoAlterado = {valor => setTime(valor)}
                 />
                 <Button texto='Criar card'></Button>
