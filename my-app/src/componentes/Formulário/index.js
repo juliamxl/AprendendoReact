@@ -5,11 +5,12 @@ import Button from '../Button';
 import {useState} from 'react';
 
 
-function Formulario() {
+function Formulario(props) {
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
+    const [time, setTime] = useState('')
 
     const times = [
         'Programação',
@@ -21,8 +22,15 @@ function Formulario() {
         'Inovação e gestão'
     ];
 
-    const aoSalvar = () => {
+    const aoSalvar = (evento) => {
+        evento.preventDefault()
         console.log('form foi enviado');
+        props.aoColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     };
 
     return (
@@ -40,18 +48,20 @@ function Formulario() {
                 label="Cargo" 
                 placeholder='Digite seu cargo' 
                 valor = {cargo}
-                aoAlterado = {valor => setNome(valor)}
+                aoAlterado = {valor => setCargo(valor)}
                 />
                 <CampoTexto 
                 obrigatorio={true} 
                 label="Imagem" 
                 placeholder='Digite o endereço da imagem' 
                 valor = {imagem}
-                aoAlterado = {valor => setNome(valor)}
+                aoAlterado = {valor => setImagem(valor)}
                 />
                 <ListaSuspensa 
                 label='Time' 
                 itens={times} 
+                valor ={time}
+                aoAlterado = {valor => setTime(valor)}
                 />
                 <Button texto='Criar card'></Button>
             </form>
