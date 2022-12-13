@@ -11,16 +11,6 @@ function Formulario(props) {
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
 
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        'Inovação e gestão'
-    ];
-
     const aoSalvar = (evento) => {
         evento.preventDefault()
         console.log('form foi enviado');
@@ -30,6 +20,10 @@ function Formulario(props) {
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     };
 
     return (
@@ -59,7 +53,7 @@ function Formulario(props) {
                 <ListaSuspensa 
                 obrigatorio={true} 
                 label="Time"
-                itens={times} 
+                itens={props.times} 
                 valor = {time}
                 aoAlterado = {valor => setTime(valor)}
                 />
