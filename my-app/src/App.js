@@ -47,7 +47,6 @@ function App() {
 
   const aoNovoColaboradorAdicionado= (colaborador) =>{
     setColaboradores([...colaboradores, colaborador])
-    console.log(colaboradores)
   }
   
   return (
@@ -63,7 +62,7 @@ function App() {
         corPrimaria={time.corPrimaria} 
         corSecundaria={time.corSecundaria} 
         nome= {time.nome}
-        colaboradores = {colaboradores}
+        colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}
     </div>
   );
