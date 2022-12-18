@@ -6,7 +6,7 @@
 }
 
 .formulario form{
-    width: 40%;
+    width: 50vw;
     padding: 30px;
     background-color: #F6F6F6;
     margin: 50px 0px;
@@ -19,4 +19,11 @@ form h2{
     font-family: 'Prata', serif;
     font-family: 'Quicksand', sans-serif;
     font-family: 'Work Sans', sans-serif;
+}
+
+@media (max-width: 500px){
+    .formulario form{
+        width: 200px;
+        font-size: 10px;
+    }
 }

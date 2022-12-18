@@ -19,3 +19,12 @@
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
     box-sizing: border-box;
 }
+
+@media (max-width: 500px){
+    .CampoTexto input{
+        font-size: 15px;
+    }
+    .CampoTexto label{
+        font-size: 15px;
+    }
+}

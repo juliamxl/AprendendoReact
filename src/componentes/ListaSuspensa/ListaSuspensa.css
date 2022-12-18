@@ -17,3 +17,12 @@
 .lista-suspensa select:hover{
     cursor: pointer;
 }
+
+@media (max-width: 500px){
+    .lista-suspensa label{
+        font-size: 15px;
+    }
+    .lista-suspensa select{
+        font-size: 15px;
+    }
+}
