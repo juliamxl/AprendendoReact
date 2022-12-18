@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulário';
+import Titulo from './componentes/Organização';
 import Time from './componentes/Time';
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
         aoColaboradorCadastrado={colaborador => 
         aoNovoColaboradorAdicionado(colaborador)}
       />
+      <Titulo/>
       {times.map(time => <Time 
         key={time.nome} 
         corPrimaria={time.corPrimaria} 

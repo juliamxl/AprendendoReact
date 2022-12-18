@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+.minha-organizacao{
+    font-family: 'Prata', serif;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #6278F7;
+}
