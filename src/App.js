@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Banner from './componentes/Banner';
+import Footer from './componentes/Footer';
 import Formulario from './componentes/Formulário';
 import Titulo from './componentes/Organização';
 import Time from './componentes/Time';
@@ -67,6 +68,7 @@ function App() {
         nome= {time.nome}
         colaboradores = {colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}
+      <Footer/>
     </div>
   );
 }
